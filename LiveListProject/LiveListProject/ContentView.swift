@@ -13,10 +13,20 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
+            
             List(countryController.countries){ country in
-                Text(country.name)
+                
+                NavigationLink(
+                    destination: DetailView(country: country),
+                    label: {
+                        Text(country.name)
+                    })
+
             }
             .navigationBarTitle("Countries", displayMode: .inline)
+            .navigationBarItems(trailing: NavigationLink(destination: AddCountryView(cityName: "")) {
+                Image(systemName: "plus.app.fill").foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+            })
         }
     }
 }

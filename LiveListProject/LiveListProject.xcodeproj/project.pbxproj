@@ -13,6 +13,8 @@
 		A82DB14D2644BEF20069EA79 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A82DB14C2644BEF20069EA79 /* Preview Assets.xcassets */; };
 		A82DB1552644C4C60069EA79 /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82DB1542644C4C60069EA79 /* CountryModel.swift */; };
 		A82DB1572644C8180069EA79 /* CountryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82DB1562644C8180069EA79 /* CountryController.swift */; };
+		A86872F2264B64CC00C06F64 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A86872F1264B64CC00C06F64 /* DetailView.swift */; };
+		A89AE1EB264E046F00FD6E07 /* AddCountryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89AE1EA264E046F00FD6E07 /* AddCountryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,9 @@
 		A82DB14E2644BEF20069EA79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A82DB1542644C4C60069EA79 /* CountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryModel.swift; sourceTree = "<group>"; };
 		A82DB1562644C8180069EA79 /* CountryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryController.swift; sourceTree = "<group>"; };
+		A86872ED264B580E00C06F64 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		A86872F1264B64CC00C06F64 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		A89AE1EA264E046F00FD6E07 /* AddCountryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCountryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,13 +61,14 @@
 		A82DB1442644BEF20069EA79 /* LiveListProject */ = {
 			isa = PBXGroup;
 			children = (
+				A86872F0264B64AA00C06F64 /* Views */,
+				A86872EF264B647500C06F64 /* Controllers */,
+				A86872EE264B646C00C06F64 /* Models */,
 				A82DB1452644BEF20069EA79 /* LiveListProjectApp.swift */,
-				A82DB1472644BEF20069EA79 /* ContentView.swift */,
 				A82DB1492644BEF20069EA79 /* Assets.xcassets */,
 				A82DB14E2644BEF20069EA79 /* Info.plist */,
 				A82DB14B2644BEF20069EA79 /* Preview Content */,
-				A82DB1542644C4C60069EA79 /* CountryModel.swift */,
-				A82DB1562644C8180069EA79 /* CountryController.swift */,
+				A86872ED264B580E00C06F64 /* MyPlayground.playground */,
 			);
 			path = LiveListProject;
 			sourceTree = "<group>";
@@ -73,6 +79,32 @@
 				A82DB14C2644BEF20069EA79 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A86872EE264B646C00C06F64 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A82DB1542644C4C60069EA79 /* CountryModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A86872EF264B647500C06F64 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A82DB1562644C8180069EA79 /* CountryController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A86872F0264B64AA00C06F64 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A82DB1472644BEF20069EA79 /* ContentView.swift */,
+				A86872F1264B64CC00C06F64 /* DetailView.swift */,
+				A89AE1EA264E046F00FD6E07 /* AddCountryView.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,7 +179,9 @@
 				A82DB1482644BEF20069EA79 /* ContentView.swift in Sources */,
 				A82DB1462644BEF20069EA79 /* LiveListProjectApp.swift in Sources */,
 				A82DB1572644C8180069EA79 /* CountryController.swift in Sources */,
+				A86872F2264B64CC00C06F64 /* DetailView.swift in Sources */,
 				A82DB1552644C4C60069EA79 /* CountryModel.swift in Sources */,
+				A89AE1EB264E046F00FD6E07 /* AddCountryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
