@@ -9,22 +9,23 @@ import SwiftUI
 
 struct ContentView: View {
     
-    var countryController = CountryContoller()
+    @StateObject var countryController = CountryContoller()
     
     var body: some View {
         NavigationView {
-            
-            List(countryController.countries){ country in
-                
-                NavigationLink(
-                    destination: DetailView(country: country),
-                    label: {
-                        Text(country.name)
-                    })
-
+            List{
+                ForEach(countryController.countries){ country in
+                    NavigationLink(
+                        destination: DetailView(country: country),
+                        label: {
+                            Text(country.name)
+                        })
+                }.onDelete(perform: { indexSet in
+                    self.countryController.countries.remove(atOffsets: indexSet)
+                })
             }
             .navigationBarTitle("Countries", displayMode: .inline)
-            .navigationBarItems(trailing: NavigationLink(destination: AddCountryView(cityName: "")) {
+            .navigationBarItems(trailing: NavigationLink(destination: AddCountryView().environmentObject(countryController)) {
                 Image(systemName: "plus.app.fill").foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
             })
         }

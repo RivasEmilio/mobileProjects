@@ -8,9 +8,9 @@
 import Foundation
 
 
-class CountryContoller {
+class CountryContoller: ObservableObject{
     
-    var countries: [CountryModel]
+    @Published var countries: [CountryModel]
     
     init() {
         self.countries = [
@@ -20,5 +20,9 @@ class CountryContoller {
             CountryModel(id: UUID(), name: "Italy", population: "68M"),
             CountryModel(id: UUID(), name: "China", population: "1388M"),
         ]
+    }
+    
+    func addCountry(newCountry: CountryModel) {
+        countries.append(newCountry)
     }
 }
